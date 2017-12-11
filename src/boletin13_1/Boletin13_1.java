@@ -5,6 +5,9 @@
  */
 package boletin13_1;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author agonzalezgonzalez
@@ -15,7 +18,13 @@ public class Boletin13_1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       ConversorTemperaturas ct=new ConversorTemperaturas();
+        try {
+            ct.centigradosAFharenheit();
+            
+        } catch (TemperaturaErradaExcepcion ex) {
+            System.out.println("La temperatura ha de ser superior a 80");
+        }
     }
     
 }

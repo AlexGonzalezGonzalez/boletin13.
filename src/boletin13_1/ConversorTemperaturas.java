@@ -20,14 +20,16 @@ public class ConversorTemperaturas {
         float centigrados;
         mensaje = JOptionPane.showInputDialog("Teclea G. centigrados");
         centigrados = Float.parseFloat(mensaje);
-        if (centigrados < t) {
+        if (centigrados > t) {
             float fharenheit;
             fharenheit = (float) (9 / 5 * centigrados + 32.4);
             JOptionPane.showMessageDialog(null, "Los G.Fherenheit son " + fharenheit);
+        }
+            else
             throw new TemperaturaErradaExcepcion("Non pode ser maior de 80 G. centigrados");
 
         }
-    }
+    
 
     public void centigradosAReimur() throws TemperaturaErradaExcepcion {
 
